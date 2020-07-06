@@ -22,7 +22,6 @@ submitButtonElement.onclick = () => {
 };
 
 widgetSDK.init((event) => {
-  console.log(event);
   if (!widgetSDK.widgetIsActive) {
     containerElement.innerHTML = "The widget is not active";
     return;
