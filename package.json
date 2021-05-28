@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ada-support/ada-widget-sdk": "^0.0.7"
+    "@ada-support/ada-widget-sdk": "^2.0.2"
   },
   "devDependencies": {
     "html-webpack-plugin": "^4.3.0",
