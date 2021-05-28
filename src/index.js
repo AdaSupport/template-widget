@@ -27,7 +27,7 @@ widgetSDK.init((event) => {
     return;
   }
 
-  const { inputdata } = widgetSDK.metaData;
+  const { inputdata } = widgetSDK.widgetInputs;
 
   sdkInputElement.innerHTML = inputdata;
 });

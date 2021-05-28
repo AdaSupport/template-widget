@@ -2,12 +2,28 @@
 # yarn lockfile v1
 
 
-"@ada-support/ada-widget-sdk@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@ada-support/ada-widget-sdk/-/ada-widget-sdk-0.0.7.tgz#2bc2b20a08f15e010a729ba649a7a4a072e80f61"
-  integrity sha512-xrV/FUcPfuOUON9HcphBJeE6iSYmtiN4VcU6VNj9eiImXt9gk4XmaPZnlQ0uR0NcqczxY53yjLPMKnG1+kthjg==
+"@ada-support/ada-widget-sdk@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@ada-support/ada-widget-sdk/-/ada-widget-sdk-2.0.2.tgz#a7b7e806198af82f932d473b4310a8d97ad16bd0"
+  integrity sha512-CFE6poJfGTFhnh6zCBjEatoK/VG95XRxy2X+0Vg9MzsEgEEzWnQVq8Pf4gGxOLIyA7UElg0R9YgdO3pPE2e/Ow==
   dependencies:
+    "@datadog/browser-logs" "^2.4.0"
     "@sentry/browser" "^5.15.0"
+
+"@datadog/browser-core@2.11.1":
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-2.11.1.tgz#bf4264aa0f34395cbb45f7d3d07511509d777b8a"
+  integrity sha512-qrU6M6R6ud7rksT0Gw17Pr1ciFfjjKxvnajRTZPHZTQdv4CgZ0FMrgkEOnjHslki6JPwluh8254nkNdhFXcITw==
+  dependencies:
+    tslib "^1.10.0"
+
+"@datadog/browser-logs@^2.4.0":
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-2.11.1.tgz#9f18e4d131edde2f919f5e755291cac759179453"
+  integrity sha512-p5Xoja27vQbYgxvWYiWpbZGZO3AxJLI7RmW/N2gxr6QYwqVnjZ2Mx+PW5mZ8MWFEyrOr6QWmcNOlCN1ojxh9FA==
+  dependencies:
+    "@datadog/browser-core" "2.11.1"
+    tslib "^1.10.0"
 
 "@sentry/browser@^5.15.0":
   version "5.19.0"
