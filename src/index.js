@@ -8,26 +8,35 @@ const inputElement = document.getElementById("input-field");
 const submitButtonElement = document.getElementById("submit-button");
 const submitMessageElement = document.getElementById("submit-message");
 
-submitButtonElement.onclick = () => {
+const handleWidgetEnd = () => {
   widgetSDK.sendUserData({
     responseData: inputElement.value
   }, (event) => {
     if (event.type === "SEND_USER_DATA_SUCCESS") {
-      submitMessageElement.innerText = "Data was successfully submitted";
+      submitMessageElement.innerText = "Data was successfully submitted. The widget will close in a moment.";
       submitButtonElement.disabled = true;
     } else {
-      submitMessageElement.innerText = "Data submission failed, please try again";
+      submitMessageElement.innerText = "Data submission failed, please try again.";
     }
   });
-};
+  setTimeout(() => {
+    widgetSDK.setWidgetClose();
+  }, 2.5 * 1000);
+}
+
+submitButtonElement.onclick = handleWidgetEnd;
 
 widgetSDK.init((event) => {
+  widgetSDK.setContainerHeight(600);
+  
   if (!widgetSDK.widgetIsActive) {
     containerElement.innerHTML = "The widget is not active";
+    handleWidgetEnd();
     return;
   }
 
-  const { inputdata } = widgetSDK.widgetInputs;
+  const { widgetInputs } = event;
+  console.log(widgetInputs);
 
-  sdkInputElement.innerHTML = inputdata;
+  sdkInputElement.innerHTML = widgetInputs.inputData;
 });
